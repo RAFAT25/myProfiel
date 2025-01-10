@@ -1,18 +1,18 @@
 const CACHE_NAME = 'portfolio-v1';
 const ASSETS = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/script.js',
-    '/manifest.json',
-    '/images/icons/icon-72x72.png',
-    '/images/icons/icon-96x96.png',
-    '/images/icons/icon-128x128.png',
-    '/images/icons/icon-144x144.png',
-    '/images/icons/icon-152x152.png',
-    '/images/icons/icon-192x192.png',
-    '/images/icons/icon-384x384.png',
-    '/images/icons/icon-512x512.png',
+    '/myProfiel/',
+    '/myProfiel/index.html',
+    '/myProfiel/styles.css',
+    '/myProfiel/script.js',
+    '/myProfiel/manifest.json',
+    '/myProfiel/images/icons/icon-72x72.png',
+    '/myProfiel/images/icons/icon-96x96.png',
+    '/myProfiel/images/icons/icon-128x128.png',
+    '/myProfiel/images/icons/icon-144x144.png',
+    '/myProfiel/images/icons/icon-152x152.png',
+    '/myProfiel/images/icons/icon-192x192.png',
+    '/myProfiel/images/icons/icon-384x384.png',
+    '/myProfiel/images/icons/icon-512x512.png',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2'
@@ -90,8 +90,8 @@ self.addEventListener('sync', (event) => {
 self.addEventListener('push', (event) => {
     const options = {
         body: event.data.text(),
-        icon: '/images/icons/icon-192x192.png',
-        badge: '/images/icons/icon-96x96.png',
+        icon: '/myProfiel/images/icons/icon-192x192.png',
+        badge: '/myProfiel/images/icons/icon-96x96.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),
