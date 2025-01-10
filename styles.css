@@ -272,11 +272,26 @@ section h2 {
 }
 
 .contact-item {
-    margin: 1.5rem 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-item i {
+    margin-left: 1rem;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
 }
 
 .social-links {
