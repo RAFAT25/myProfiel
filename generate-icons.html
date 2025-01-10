@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Icons</title>
+</head>
+<body>
+    <canvas id="iconCanvas"></canvas>
+    <div id="downloadLinks"></div>
+
+    <script>
+        const sizes = [32, 72, 96, 128, 144, 152, 180, 192, 384, 512];
+        const canvas = document.getElementById('iconCanvas');
+        const ctx = canvas.getContext('2d');
+        const downloadLinks = document.getElementById('downloadLinks');
+
+        function drawIcon(size) {
+            canvas.width = size;
+            canvas.height = size;
+            
+            // Draw background circle
+            ctx.fillStyle = '#2563eb';
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Draw "ر" letter
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = size * 0.09375; // Equivalent to 48/512
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            // Calculate letter dimensions
+            const letterWidth = size * 0.25; // 128/512
+            const letterHeight = size * 0.5; // 256/512
+            const x = size * 0.5; // 256/512
+            const y = size * 0.25; // 128/512
+
+            // Draw the letter
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.quadraticCurveTo(
+                x + letterWidth, y,
+                x + letterWidth, y + letterHeight/2
+            );
+            ctx.quadraticCurveTo(
+                x + letterWidth, y + letterHeight,
+                x, y + letterHeight
+            );
+            ctx.stroke();
+
+            // Create download link
+            const link = document.createElement('a');
+            link.download = `icon-${size}x${size}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.innerHTML = `Download ${size}x${size} icon<br>`;
+            downloadLinks.appendChild(link);
+        }
+
+        // Generate icons for all sizes
+        sizes.forEach(size => drawIcon(size));
+    </script>
+</body>
+</html>

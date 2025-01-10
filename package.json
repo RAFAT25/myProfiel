@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-pwa",
+  "version": "1.0.0",
+  "description": "Portfolio website with PWA support",
+  "scripts": {
+    "generate-icons": "node generate-icons.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.6"
+  }
+}

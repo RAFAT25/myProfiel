@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- خلفية دائرية -->
+    <circle cx="256" cy="256" r="256" fill="#2563eb"/>
+    
+    <!-- الحرف "ر" باللون الأبيض -->
+    <path d="M256 128
+             C 256 128, 320 128, 352 160
+             C 384 192, 384 224, 384 256
+             C 384 288, 384 320, 352 352
+             C 320 384, 256 384, 256 384
+             L 256 128
+             M 256 256
+             L 384 256" 
+          stroke="white" 
+          stroke-width="48"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"/>
+</svg>
