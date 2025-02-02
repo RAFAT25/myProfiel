@@ -16,8 +16,9 @@
 - HTML5
 - CSS3
 - JavaScript (ES6+)
+- Node.js
+- Express
 - Service Workers
-- Web App Manifest
 
 ## التشغيل محلياً
 
